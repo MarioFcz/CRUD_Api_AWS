@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "c70d2b3a-fb25-41a3-b851-18de05b10a0c",
+		"name": "Prueba_CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get_Libro_ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://556l02jrr3.execute-api.us-east-1.amazonaws.com/Deploy/libro?id=123456789",
+					"protocol": "https",
+					"host": [
+						"556l02jrr3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Deploy",
+						"libro"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123456789"
+						}
+					]
+				},
+				"description": "Prueba de obtener los datos de un libro mediante su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Libros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://556l02jrr3.execute-api.us-east-1.amazonaws.com/Deploy/libros",
+					"protocol": "https",
+					"host": [
+						"556l02jrr3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Deploy",
+						"libros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_Libros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Author\": \"Alfredo Molano \",\r\n            \"id\": \"852369741\",\r\n            \"Editorial\": \"Aguilar\",\r\n            \"title\": \"Cartas a Antonia\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://556l02jrr3.execute-api.us-east-1.amazonaws.com/Deploy/libro",
+					"protocol": "https",
+					"host": [
+						"556l02jrr3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Deploy",
+						"libro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify_Libros",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"852369741\",\r\n            \"CampoID\": \"title\",\r\n            \"New_Valor\": \"Cartas a Gabriela\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://556l02jrr3.execute-api.us-east-1.amazonaws.com/Deploy/libro",
+					"protocol": "https",
+					"host": [
+						"556l02jrr3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Deploy",
+						"libro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Libros",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"222222222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://556l02jrr3.execute-api.us-east-1.amazonaws.com/Deploy/libro",
+					"protocol": "https",
+					"host": [
+						"556l02jrr3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Deploy",
+						"libro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
